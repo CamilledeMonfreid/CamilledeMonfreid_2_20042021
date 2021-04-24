@@ -1,3 +1,53 @@
+/* Reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* Mises en forme générales */
 body
 {
@@ -55,7 +105,7 @@ header
 {
     text-decoration: none;
     color: black;
-    padding-top: 22px;   
+    padding-top: 15px;   
 }
 
 #menu_hebergement a:hover,#menu_activites a:hover
@@ -81,7 +131,8 @@ header
 /* Barre de Recherche */
 #zone_recherche
 {   
-    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #barre_recherche
@@ -93,6 +144,8 @@ header
     flex-basis: auto;
     flex-shrink: 0;
     box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -123,7 +176,7 @@ header
     color:white;
     font-weight: 700;
     background-color: #0065FC;
-    padding: 11px;
+    padding: 10px;
     font-size: small;
     border-radius: 0px 10px 10px 0px;
 }
@@ -142,7 +195,7 @@ header
 }
 
 
-#filtres_nom a
+.filtres_nom a
 {
     display: flex;
     justify-content: space-between;
@@ -161,7 +214,7 @@ header
     color:black;    
 }
 
-#filtres_nom a:hover
+.filtres_nom a:hover
 {
     background-color:#DEEBFF;
 }
@@ -217,8 +270,8 @@ header
 {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    height: 70%;
+    width: 68%;
+    height: 100%;
     background-color: #F2F2F2;
     border-radius: 20px 20px 20px 20px;   
 
@@ -228,18 +281,35 @@ header
 {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;  
-}
-
-#hebergements_description_hotel
-{
-    width: 30%;
+    flex-wrap: wrap;
     
 }
 
-#hebergements_description_hotel img
+.hebergements_description_hotel
 {
-    width: 30%;
-    height: 30%;
+    display: flex;
+    justify-content: center;
+    width: calc(33.3333% - 30px);
+    height: calc(59% - 10px);
+    background-color: white;
+    margin: 10px;
+    align-content: center;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+
+
+.hebergements_description_hotel img
+{
+    background-size:cover ;
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
 }
