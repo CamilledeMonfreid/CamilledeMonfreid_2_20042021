@@ -62,7 +62,7 @@ p,ul,#menu
     font-weight:300;
 }
 
-h1,h2
+h1,h2,h3
 {
     font-weight: 700;
 }
@@ -74,6 +74,10 @@ h1
 
 h2{
     font-size:medium;
+}
+
+h3{
+    font-size: small;
 }
 
 /* Mise en forme de l'en-tête du site Réservia */
@@ -273,9 +277,18 @@ header
     width: 68%;
     height: 100%;
     background-color: #F2F2F2;
-    border-radius: 20px 20px 20px 20px;   
-
+    border-radius: 20px 20px 20px 20px;
+    padding: 20px 0px 20px 20px;   
 }
+
+.hebergements_description_txt
+{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+/* Cartes des hébergements */
 
 #hebergements_description_clique
 {
@@ -284,7 +297,7 @@ header
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    padding: 0px 0px 0px 0px;    
 }
 
 .hebergements_description_hotel
@@ -296,20 +309,61 @@ header
     background-color: white;
     margin: 10px;
     align-content: center;
-    padding: 5px;
+    padding: 3px;
     text-decoration: none;
     color: black;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
     
 }
 
-
-
 .hebergements_description_hotel img
 {
-    background-size:cover ;
+    object-fit: cover;
     width: 100%;
-    height: 100px;
-    border-top-left-radius: 10px;
-    border-top-right-radius:10px ;
+    height: 85px;
+    border-radius: 15px 15px 0px 0px;   
 }
+
+.hebergements_description_hotel_txt
+{ 
+    padding-left: 10px;
+}
+
+.hebergements_description_hotel_txt h3
+{
+    padding: 2px;
+}
+
+.hebergements_description_hotel:hover, .hebergements_description_txt h3:hover
+{
+    color: #0065FC;
+}
+
+.hebergements_description_hotel_txt p
+{
+    padding: 2px;
+}
+
+.hebergements_description_hotel_txt .etoiles
+{
+    font-size: small;
+    padding: 4px;
+    display: flex;
+}
+
+.hebergements_description_hotel_txt .etoiles_grises
+{  
+    color:#F2F2F2
+}
+
+.hebergements_description_hotel_txt .etoiles_bleues
+{    
+    color:#0065FC;
+}
+
+.hebergements_description_hotel:hover
+{
+    transform: scale(1.05);
+}
+
