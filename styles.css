@@ -49,16 +49,24 @@ table {
 }
 
 /* Mises en forme générales */
-body
+body 
 {
     font-family: 'Raleway', sans-serif;
-    margin-left: 30px;
-    margin-right: 30px;
+}
+body header, body #zone_recherche, body #activites, body #hebergements
+{
+   
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-p,ul,#menu
+#menu
 {
-    font-size: small;
+    font-size: medium;
+}
+p,ul
+{
+    font-size: medium;
     font-weight:300;
 }
 
@@ -69,15 +77,15 @@ h1,h2,h3
 
 h1
 {
-    font-size: large;
+    font-size:x-large;
 }
 
 h2{
-    font-size:medium;
+    font-size:large;
 }
 
 h3{
-    font-size: small;
+    font-size: medium;
 }
 
 /* Mise en forme de l'en-tête du site Réservia */
@@ -85,14 +93,22 @@ header
 {
     display: flex;
     justify-content:space-between;
-    align-items: center;
+    align-items:center;
+    margin-top: 30px;
+    
 }
 
 #logo
 {
+
     flex: 70%;
 }
 
+#logo img
+{
+    width: 100px;
+    height: auto;
+}
 #menu
 {
     display: flex;
@@ -109,13 +125,13 @@ header
 {
     text-decoration: none;
     color: black;
-    padding-top: 15px;   
+    padding: 41px 25px 0px 25px;   
 }
 
 #menu_hebergement a:hover,#menu_activites a:hover
 {
     color:#0065FC;
-    border-top: 3px solid #0065FC;
+    border-top: 4px solid #0065FC;
 }
 
 #menu_inscription a
@@ -123,6 +139,7 @@ header
     text-decoration: none;
     color:#0065FC;
     font-weight: 700;
+    padding: 50px 0px 0px 25px;  
 }
 
 #menu_inscription a:hover
@@ -270,15 +287,17 @@ header
     justify-content: space-between;
 }
 
+/* Cartes des hébergements */
 #hebergements_description
 {
     display: flex;
     flex-direction: column;
-    width: 68%;
+    width: 60%;
     height: 100%;
     background-color: #F2F2F2;
     border-radius: 20px 20px 20px 20px;
-    padding: 20px 0px 20px 20px;   
+    padding: 20px 0px 20px 20px;
+    margin-right: 30px;
 }
 
 .hebergements_description_txt
@@ -287,8 +306,6 @@ header
     color: black;
     padding: 10px;
 }
-
-/* Cartes des hébergements */
 
 #hebergements_description_clique
 {
@@ -313,16 +330,15 @@ header
     text-decoration: none;
     color: black;
     border-radius: 15px 15px 15px 15px;
-    box-shadow: 2px 2px 5px rgb(201 201 201);
-    
+    box-shadow: 2px 2px 5px rgb(201 201 201);   
 }
 
 .hebergements_description_hotel img
 {
     object-fit: cover;
     width: 100%;
-    height: 85px;
-    border-radius: 15px 15px 0px 0px;   
+    height: 100px;
+    border-radius: 15px 15px 0px 0px; 
 }
 
 .hebergements_description_hotel_txt
@@ -367,3 +383,315 @@ header
     transform: scale(1.05);
 }
 
+/* Hébergements populaires */
+
+#hebergements_populaires
+{
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+    background-color: #F2F2F2;
+    border-radius: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+   
+    position: relative;
+}
+
+#hebergements_populaires_descpription
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px 10px 0px;
+     
+}
+
+#hebergements_populaires_clique
+{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 0px 0px 0px;    
+}
+
+.hebergements_populaires_hotel
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 300px;
+    background-color: white;
+    margin: 23px 5px 0px 5px;   
+    padding: 3px;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+}
+
+.hebergements_populaires_hotel img
+{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px 0px 0px 15px;   
+}
+
+.carte_txt
+{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    
+}
+
+.texte
+{
+    text-decoration: none;
+}
+
+.texte .hebergements_populaires_hotel .carte_txt h3
+{
+    padding: 2px;
+}
+
+.hebergements_populaires_hotel:hover
+{
+    color: #0065FC;
+}
+
+.texte .hebergements_populaires_hotel .carte_txt p
+{
+    padding: 2px;
+}
+
+.texte .hebergements_populaires_hotel .etoiles
+{
+    font-size: small;
+    padding: 4px;
+    display: flex;
+    
+}
+
+.texte .hebergements_populaires_hotel .etoiles_grises
+{  
+    color:#F2F2F2
+}
+
+.texte .hebergements_populaires_hotel .etoiles_bleues
+{    
+    color:#0065FC;
+}
+
+.texte:hover
+{
+    transform: scale(1.05);
+}
+
+/* Activités*/
+
+#activites_marseille
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px;
+}
+
+#activites_marseille_port
+{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height:fit-content;
+    background-color: white;
+    margin: 10px;
+    align-content: center;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+
+}
+
+#activites_marseille_calanques
+{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height:fit-content;
+    background-color: white;
+    margin: 10px;
+    align-content: center;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+}
+
+#activites_marseille_port img, #activites_marseille_calanques img
+{
+object-fit: cover;
+width: 300px;
+height: 385px;
+border-radius: 15px 15px 0px 0px; 
+}
+
+#activites_marseille_pomegues, #activites_marseille_frioul
+{
+
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height:fit-content;
+    background-color: white;
+    margin: 10px;
+    align-content: center;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+}
+
+
+#activites_marseille_pomegues img
+{
+    object-fit: cover;
+    width: 300px;
+    height: 180px;
+    border-radius: 15px 15px 0px 0px; 
+}
+
+#activites_marseille_frioul
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height:fit-content;
+    background-color: white;
+    margin: 10px;
+    align-content: center;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+}
+
+#activites_marseille_frioul img
+{
+    object-fit: cover;
+    width: 300px;
+    height: 110px;
+    border-radius: 15px 15px 0px 0px; 
+}
+
+#activites_marseille_garde
+{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height:fit-content;
+    background-color: white;
+    margin: 10px;
+    align-content: center;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+}
+
+#activites_marseille_garde img
+{
+    object-fit: cover;
+    width: 300px;
+    height: 140px;
+    border-radius: 15px 15px 0px 0px; 
+}
+
+#activites_marseille_longchamp
+{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height:fit-content;
+    background-color: white;
+    margin: 10px;
+    align-content: center;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+}
+
+#activites_marseille_longchamp img
+{
+    object-fit: cover;
+    width: 300px;
+    height: 155px;
+    border-radius: 15px 15px 0px 0px; 
+}
+
+
+
+/* Footer */
+
+footer
+{
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.footer_content
+{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.footer ul li
+{
+    padding: 10px 0px 0px 0px;
+}
+
+.footer h2
+{
+    padding: 0px 0px 5px 0px;    
+}
+
+.footer_content:hover
+{
+    color: #0065FC;
+}
