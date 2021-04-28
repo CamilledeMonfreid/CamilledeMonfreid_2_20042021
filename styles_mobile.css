@@ -1,0 +1,658 @@
+/*Début du reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Fin du reset CSS */
+
+/*Début des mises en forme générales */
+body 
+{
+    font-family: 'Raleway', sans-serif;
+}
+
+header
+{ 
+    margin: 25px 0px 0px 00px;
+}
+
+h1,h2
+{
+    font-size: large;
+    font-weight: 700;
+}
+
+h3, #br_bouton
+{
+    font-size: medium;
+    font-weight: 700;
+}
+
+h4
+{
+    font-size: small;
+    font-weight: 700;
+}
+
+#menu, p,.footer_content
+{
+    font-size: small;
+}
+/*Fin des mises en forme générales */
+
+/*Début de la mise en forme du header*/
+header
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin-top: 25px; 
+    justify-items: stretch;
+    align-items: stretch;
+}
+    
+#logo
+{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self:start;
+    padding-left: 10px;
+}
+
+/*Début de la mise en forme du menu*/
+.menu_nav
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-self:stretch;
+    align-self: stretch;
+}
+
+.menu_nav a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self:stretch;
+    align-self: stretch;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    border-bottom: 2px solid #F2F2F2;
+}
+
+
+#menu_inscription
+{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self:end;
+    align-self: center;
+}
+
+#menu_inscription a
+{
+    justify-self:end;
+    text-decoration: none;
+    color:#0065FC;
+    font-weight: 700;
+    padding: 38px 25px 25px 25px;  
+}
+
+.menu_nav a:hover
+{
+    color:#0065FC;
+    border-bottom: 2px solid #0065FC;
+}
+/*Fin de la mise en forme du menu*/
+/*Fin de la mise en forme du header*/
+
+/*Début de la mise en forme de la zone de recherche et de filtre*/
+#zone_recherche
+{   
+    margin: 20px 0px 20px 0px;
+}
+
+#zone_recherche h1, #zone_recherche p
+{
+    padding: 5px 70px 5px 25px;
+}
+
+/*Début mise en forme barre de Recherche */
+#barre_recherche
+{
+    display: flex;
+    flex: 1 1 0;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0px 20px 25px;
+    width: 100%;
+    height: 45px;
+}
+
+#br_icone 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 0px 0px 15px;
+    background-color: #F2F2F2; 
+    width: 15%;
+    height: 100%;
+    font-size: medium;
+}
+
+#br_saisierecherche
+{
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    width: 60%;
+}
+
+#br_saisierecherche input
+{
+    width: 100%;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F2F2F2;
+    font-family: 'Raleway';
+    font-weight: 700;
+    outline: #F2F2F2;   
+}
+
+#br_bouton
+    {
+        display: none;
+    }
+
+#br_bouton a
+{
+    display: none;
+}
+
+#br_loupe
+{
+    display: flex;
+    justify-content: flex-start;
+    width: 15%;
+    height: 100%;
+}
+
+#br_loupe a
+{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0065FC;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: medium;
+    color: white;
+}
+/*Fin mise en forme barre de Recherche */
+
+/*Début mise en forme filtres*/
+#filtres
+{      
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: auto;
+    flex-shrink: 0;
+    margin: 25px 25px 0px 25px;
+}
+
+#filtres_cliquable
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#filtres_titre h3
+{
+    padding: 0px 10px 10px 0px;
+}
+
+.filtres_nom a
+{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 5px 20px 5px 0px;
+    padding: 0px 10px 0px 0px;
+    height: 36px;
+    border-style: solid;
+    border-radius:35px 35px 35px 35px;
+    border-color: #D4D4D4;
+    border-width: 1px;    
+    border-left: none;
+    text-decoration: none;
+    color:black;
+}
+
+.filtres_nom h3
+{
+    padding: 5px
+}
+    
+#filtres_icone
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    border-radius:40px 40px 40px 40px;
+    background-color: #DEEBFF;
+    margin-left: 0px 1px 0px 0px;
+    color:#0065FC;  
+}
+
+.filtres_nom a:hover
+{
+    background-color:#DEEBFF;
+}
+/*Fin mise en forme filtres*/
+/*Fin de la mise en forme de la zone de recherche et de filtre*/
+
+/*Début mise en forme information*/
+#info
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 25px 25px 0px 25px;
+}
+
+#info p
+{
+    padding: 0px 25px 0px 10px;
+    text-align: justify;
+}
+
+#info_logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    margin-right: 0px 1px 0px 0px;
+    border-radius: 20px 20px 20px 20px;   
+    border-style: solid;
+    border-color:#F2F2F2 ;
+    border-width: 1px;
+    color: #0065FC;
+    font-size:x-small;
+    padding: 2px
+}
+/*Fin mise en forme information*/
+
+/*Début de la mise en forme de la zone de description des hébergements */
+#hebergements
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.etoiles
+{
+    font-size: small;
+    padding: 5px;
+    display: flex;
+}
+
+.etoiles_grises
+{  
+    color:#F2F2F2
+}
+
+.etoiles_bleues
+{    
+    color:#0065FC;
+}
+
+/*Début de la mise en forme des hébergements à Marseille*/
+#hebergements_description:nth-child(1)
+{
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding:0px;
+}
+
+.hebergements_description_titre
+{
+    text-decoration: none;
+    color: black;
+    padding: 20px 0px 10px 29px;
+}
+
+/*Début de la mise en page des cartes hébergements*/
+#hebergements_cartes
+{
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;  
+}
+
+.hebergements_carte_hotel
+{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    align-content: center;
+    width: 84%;
+    margin: 5px 25px 5px 25px;
+    padding: 4px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+    text-decoration: none;
+    color: black;
+}
+
+.hebergements_image
+{
+    object-fit: cover;
+    width: 100%;
+    height: 125px;
+    border-radius: 20px 20px 0px 0px; 
+}
+    
+.hebergements_carte_hotel_txt
+{ 
+    padding: 2px 2px 5px 10px;
+}
+
+.hebergements_carte_hotel_txt h4, .hebergements_carte_hotel_txt p
+{
+    padding: 4px;
+}  
+
+.hebergements_carte_hotel:hover, .hebergements_description_titre h4:hover
+{
+    color: #0065FC;
+}
+
+.hebergements_carte_hotel:hover
+{
+    transform: scale(1.05);
+}
+/*Fin de la mise en page des cartes hébergements*/
+
+/*Début de la mise en page des hébergements populaires */
+#hebergements_populaires:nth-child(2)
+{
+    display: flex;
+    order: 1;
+    flex-direction: column;
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #F2F2F2;
+    position: relative;
+}
+
+#hebergements_populaires_titre
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;    
+}
+
+#hebergements_populaires_titre i
+{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/*Début de la mise en page des cartes des hébergements populaires */
+#hebergements_populaires_cartes
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 0px 25px 0px;
+    height: 100%;
+}
+
+.hebergements_carte_populaire
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 85%;
+    height: 100px;
+    margin: 5px 0px 5px 0px;
+    padding: 0px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+    text-decoration: none;
+    color: black;
+}
+
+ .hebergements_populaires_image
+ {
+     object-fit: cover;
+     padding: 4px 0px 4px 4px;
+     width: 100px;
+     height: calc(100%-8px);
+     border-radius: 20px 0px 0px 20px;
+ }
+
+ .hebergements_carte_populaire_content
+ {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
+
+ .hebergements_carte_populaire_txt,.hebergements_carte_populaire_content .etoiles
+ { 
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     padding: 5px 5px 5px 5px;  
+}
+
+.hebergements_carte_populaire_txt h4, .hebergements_carte_populaire_txt p
+{
+    padding: 4px;
+}
+
+.hebergements_carte_populaire:hover
+{
+    color: #0065FC;
+    transform: scale(1.05);
+}
+/*Fin de la mise en page des cartes des hébergements populaires */
+/*Fin de la mise en page des hébergements populaires */
+/*Fin de la mise en forme de la zone de description des hébergements */
+
+/*Début de la mise en page de la zone activités*/
+#activites
+{
+    padding: 10px 0px 10px 0px;
+}
+
+.activites_titre
+{
+    padding: 25px 25px 5px 25px;
+}
+
+/*Début de la mise en page des cartes activités*/
+#activites_marseille
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0px 40px 0px;
+}
+    
+#activites_marseille a
+{
+    text-decoration: none;
+}
+
+.activites_cartes_long
+{
+    margin: 10px 25px 10px 25px;
+    height: 100%;
+    width: 85%;
+}
+
+#activites_cartes_6535, #activites_cartes_4060
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+}
+
+#activites_cartes1, #activites_cartes2, #activites_cartes3, #activites_cartes4, #activites_cartes5
+{
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(201 201 201);
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;    
+}
+
+#activites_cartes2, #activites_cartes3, #activites_cartes4, #activites_cartes5
+{
+    margin: 10px 25px 10px 25px;
+    width: 85%;
+}
+
+.activites_image_long, #activites_image_pomegues, #activites_image_frioul, #activites_image_parc, #activites_image_garde
+{
+    object-fit: cover;
+    width: 100%;
+    height: 125px;
+    border-radius:20px 20px 0px 0px;
+}
+
+figcaption
+{
+    display: flex;
+    align-content: center;
+    color: black;
+    font-size: medium;
+    font-weight: 700;
+    padding: 10px 0px 10px 10px;
+}
+
+figcaption:hover
+{
+    color: #0065FC;
+}
+
+#activites_cartes1:hover, #activites_cartes2:hover, #activites_cartes3:hover, #activites_cartes4:hover, #activites_cartes5:hover
+{
+    transform: scale(1.05);
+    color: #0065FC;
+}
+/*Fin de la mise en page des cartes activités*/
+/*Fin de la mise en page de la zone activités*/
+
+/*Début de la mise en page de la zone "A Propos"*/
+footer
+{
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.footer
+{
+    margin: 0px 0px 25px 0px;
+}
+
+.footer_content
+{
+    text-decoration: none;
+    color: black;
+}
+
+.footer ul li
+{
+    padding: 5px 0px 0px 0px;
+}
+
+.footer h2
+{
+    padding: 0px 0px 5px 0px;    
+}
+
+.footer_content:hover
+{
+    color: #0065FC;
+}
+/*Fin de la mise en page de la zone "A Propos"*/
