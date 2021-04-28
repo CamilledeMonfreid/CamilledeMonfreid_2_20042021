@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" media="screen and (max-device-width: 980px)" href="styles_mobile.css"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
@@ -17,16 +18,14 @@
         <!--Header-->
         <header>
             <div id="logo">
-                <img src="images/logo/Reservia.svg" alt="Logo de Réservia">
+                <img src="images/logo/Reservia.svg" alt="Logo de Réservia" id="logo">
             </div>
 
-            <nav id="menu">
-                <ul>
-                    <li class="menu_nav"><a href="#hebergements">Hébergements</a></li>
-                    <li class="menu_nav"><a href="#activites">Activités</a></li>
-                    <li id="menu_inscription"><a href="#">S'inscrire</a></li>
-                </ul>
-            </nav>
+            <div class="menu_nav"><a href="#hebergements">Hébergements</a></div>
+            <div class="menu_nav"><a href="#activites">Activités</a></div>
+            <div id="menu_inscription"><a href="#">S'inscrire</a></div>
+            
+            
         </header>
         <!--/Header-->
 
@@ -40,6 +39,7 @@
                 <div id="br_icone"><i class="fas fa-map-marker-alt"></i> </div>
                 <div id="br_saisierecherche"><input type="text" name="rechercher"/></div>
                 <div id="br_bouton"><a href="#">Rechercher</a> </div>
+                <div id="br_loupe"><a href="#"><i class="fas fa-search"></i></a> </div>
             </div>
             <!--/Barre de recherche-->
         
@@ -47,22 +47,23 @@
             <div id="filtres">
                 <div id="filtres_titre"><h3>Filtres</h3></div>
                 
-                <div class="filtres_nom"><a href="#"><i class="fas fa-money-bill-wave" id="filtres_icone"></i><h3>Economique</h3></a></div>
-                <div class="filtres_nom"><a href="#"><i class="fas fa-child" id="filtres_icone"></i><h3>Familial</h3></a></div>
-                <div class="filtres_nom"><a href="#"><i class="fas fa-heart" id="filtres_icone"></i><h3>Romantique</h3></a></div>
-                <div class="filtres_nom"><a href="#"><i class="fas fa-dog" id="filtres_icone"></i><h3>Animaux autorisés</h3></a></div>
-                
-            </div>
+                <div id="filtres_cliquable">
+                    <div class="filtres_nom"><a href="#"><i class="fas fa-money-bill-wave" id="filtres_icone"></i><h3>Economique</h3></a></div>
+                    <div class="filtres_nom"><a href="#"><i class="fas fa-child" id="filtres_icone"></i><h3>Familial</h3></a></div>
+                    <div class="filtres_nom"><a href="#"><i class="fas fa-heart" id="filtres_icone"></i><h3>Romantique</h3></a></div>
+                    <div class="filtres_nom"><a href="#"><i class="fas fa-dog" id="filtres_icone"></i><h3>Animaux autorisés</h3></a>    </div>
+                </div>
             <!--/Filtres-->
-
-            <!--Information-->
-            <div id="info">
+            </div>
+            </div>
+        <!--/Zone de recherche et de filtres-->
+        
+        <!--Information-->
+        <div id="info">
                 <i class="fas fa-info" id="info_logo"></i>
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
-            <!--/Information-->
-        </div>
-        <!--/Zone de recherche et de filtres-->
+        <!--/Information-->
 
         <!--Zone de description des hébergements-->
         <section id="hebergements">
@@ -244,16 +245,18 @@
                                 </div>
                             </div>
                             <!--/5 étoiles-->
-                            
                         </div>
                     </a>
 
                     <a href="#" class="hebergements_carte_populaire">
                         <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="eau" class="hebergements_populaires_image">
                         
-                        <div class="hebergements_carte_populaire_txt">
-                            <h4>Au coeur de l'eau Chambre d'hôtes</h4>
-                            <p>Nuit à partir de 71€</p>
+                        <div class="hebergements_carte_populaire_content">
+                            <div class="hebergements_carte_populaire_txt">
+                                <h4>Au coeur de l'eau Chambre d'hôtes</h4>
+                                <p>Nuit à partir de 71€</p>
+                            </div>
+                        
                             <!--4 étoile-->
                             <div class="etoiles">
                                 <div class="etoiles_bleues">
@@ -274,9 +277,12 @@
                     <a href="#" class="hebergements_carte_populaire">
                         <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="bleublanc" class="hebergements_populaires_image">
                         
-                        <div class="hebergements_carte_populaire_txt">
-                            <h4>Hôtel Tout bleu et Blanc</h4>
-                            <p>Nuit à partir de 68€</p>
+                        <div class="hebergements_carte_populaire_content">
+                            <div class="hebergements_carte_populaire_txt">
+                                <h4>Hôtel Tout bleu et Blanc</h4>
+                                <p>Nuit à partir de 68€</p>
+                            </div>
+                        
                             <!--4 étoiles-->
                             <div class="etoiles">
                                 <div class="etoiles_bleues">
@@ -290,7 +296,7 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                             </div>
-                            <!--4 étoiles-->
+                        <!--/4 étoiles-->
                         </div>
                     </a>
                 </div>
@@ -319,14 +325,14 @@
                 <div id="activites_cartes_6535">
                     <figure id="activites_cartes2">
                         <a href="#">
-                            <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="pomegues" class ="activites_image_pomegues">
+                            <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="pomegues" id ="activites_image_pomegues">
                             <figcaption>Fort de Pomègues</figcaption>
                         </a>    
                     </figure>
 
                     <figure id="activites_cartes3">
                         <a href="#">
-                            <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="frioul" class ="activites_image_frioul">
+                            <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="frioul" id ="activites_image_frioul">
                             <figcaption>Iles du Frioul</figcaption>
                         </a>    
                     </figure>
@@ -341,18 +347,17 @@
                     </figure>
                 </div>
             
-
                 <div id="activites_cartes_4060">
                     <figure id="activites_cartes4"> 
                         <a href="#">
-                            <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="garde" class ="activites_image_garde">
+                            <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="garde" id ="activites_image_garde">
                             <figcaption>Notre-Dame-de-la-Garde</figcaption>   
                         </a>
                     </figure>
 
                     <figure id="activites_cartes5"> 
                         <a href="#">
-                            <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="garde" class ="activites_image_parc">
+                            <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="garde" id ="activites_image_parc">
                             <figcaption>Parc longchamp</figcaption>   
                         </a>
                     </figure>
@@ -363,7 +368,7 @@
         </section>
         <!--/Zone de présentation des activités-->
 
-        <!--A Propos-->
+        <!--Zone "A Propos"-->
         <footer>
             <div class="footer">
                 <h4>A propos</h4>
@@ -390,7 +395,8 @@
                 </ul>      
             </div>
         </footer>
+        <!--/Zone "A Propos"-->
+    
     </body>
     <!--Body du projet 2-->
-
 </html>
