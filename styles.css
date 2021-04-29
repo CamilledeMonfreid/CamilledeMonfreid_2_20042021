@@ -250,7 +250,7 @@ header
     padding: 10px
 }
     
-#filtres_icone
+#filtres_icone1, #filtres_icone2, #filtres_icone3, #filtres_icone4
 {
     display: flex;
     justify-content: center;
@@ -544,7 +544,7 @@ header
     margin: 10px;
 }
 
-#activites_cartes1, #activites_cartes2, #activites_cartes3, #activites_cartes4, #activites_cartes5
+.activites_cartes1, #activites_cartes2, #activites_cartes3, #activites_cartes4, #activites_cartes5
 {
     border-radius: 20px 20px 20px 20px;
     background-color: white;
@@ -553,7 +553,7 @@ header
     color: black;
 }
 
-#activites_cartes1
+.activites_cartes1
 {
     height: 100%;
 }
@@ -635,7 +635,7 @@ figcaption:hover
     color: #0065FC;
 }
 
-#activites_cartes1:hover, #activites_cartes2:hover, #activites_cartes3:hover, #activites_cartes4:hover, #activites_cartes5:hover
+.activites_cartes1:hover, #activites_cartes2:hover, #activites_cartes3:hover, #activites_cartes4:hover, #activites_cartes5:hover
 {
     transform: scale(1.05);
     color: #0065FC;
