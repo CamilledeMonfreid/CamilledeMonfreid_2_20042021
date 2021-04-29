@@ -55,7 +55,7 @@ body
     font-family: 'Raleway', sans-serif;
 }
 
-body header, body #zone_recherche, body #activites, body #hebergements, body #info
+body header, body #zone_recherche, body #activites, body #hebergements
 { 
     margin: 25px 50px 0px 50px;
 }
@@ -277,7 +277,7 @@ header
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 25px 0px 0px 0px;
+    margin: 25px 0px 0px 50px;
 }
 
 #info p
@@ -476,7 +476,7 @@ header
     justify-content: space-between;
 }
 
-.hebergements_carte_populaire_txt,
+.hebergements_carte_populaire_txt
 { 
     display: flex;
     flex-direction: column;
@@ -674,3 +674,395 @@ footer
     color: #0065FC;
 }
 /*Fin de la mise en page de la zone "A Propos"*/
+
+@media (max-width: 980px) { 
+
+    /*Début des mises en forme générales */
+    body header, body #zone_recherche, body #activites, body #hebergements
+{ 
+    margin: 25px 0px 0px 0px;
+}
+
+h1,h2
+{
+    font-size: large;
+    font-weight: 700;
+}
+
+h3, #br_bouton
+{
+    font-size: medium;
+    font-weight: 700;
+}
+
+h4
+{
+    font-size: small;
+    font-weight: 700;
+}
+
+#menu, p,.footer_content
+{
+    font-size: small;
+}
+
+
+/*Fin des mises en forme générales */
+
+/*Début de la mise en forme du header*/
+header
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: stretch;
+    align-items: stretch;
+}
+    
+#logo
+{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self:start;
+    padding-left: 10px;
+}
+
+/*Début de la mise en forme du menu*/
+.menu_nav
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-self:stretch;
+    align-self: stretch;
+}
+
+.menu_nav a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self:stretch;
+    align-self: stretch;
+    width: 100%;
+    border-bottom: 2px solid #F2F2F2;
+    padding: 0px;
+}
+
+
+#menu_inscription
+{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self:end;
+    align-self: center;
+}
+
+#menu_inscription a
+{
+    justify-self:end;
+    
+    padding: 38px 25px 25px 25px;  
+}
+
+.menu_nav a:hover
+{
+    color:#0065FC;
+    border-top: none;
+    border-bottom: 2px solid #0065FC;
+
+}
+/*Fin de la mise en forme du menu*/
+/*Fin de la mise en forme du header*/
+
+/*Début de la mise en forme de la zone de recherche et de filtre*/
+#zone_recherche h1, #zone_recherche p
+{
+    padding: 5px 70px 5px 25px;
+}
+
+/*Début mise en forme barre de Recherche */
+#barre_recherche
+{
+    justify-content: flex-start;
+    margin: 20px 0px 20px 25px;
+    width: 100%;
+}
+
+#br_icone 
+{
+    width: 15%;
+    height: 100%;
+}
+
+#br_saisierecherche
+{
+    width: 60%;
+}
+
+#br_saisierecherche input
+{
+    width: 100%;   
+}
+
+#br_bouton
+    {
+        display: none;
+    }
+
+#br_bouton a
+{
+    display: none;
+}
+
+#br_loupe
+{
+    display: flex;
+    justify-content: flex-start;
+    width: 15%;
+    height: 100%;
+}
+
+#br_loupe a
+{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0065FC;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: medium;
+    color: white;
+}
+/*Fin mise en forme barre de Recherche */
+
+/*Début mise en forme filtres*/
+#filtres
+{      
+    align-items:flex-start;    
+    align-content:flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 25px 25px 0px 25px;
+}
+
+#filtres_cliquable
+{
+    flex-wrap: wrap;
+}
+
+#filtres_titre h3
+{
+    padding: 0px 10px 10px 0px;
+}
+
+.filtres_nom a
+{
+    margin: 5px 20px 5px 0px;
+    padding: 0px 10px 0px 0px;
+}
+
+.filtres_nom h3
+{
+    padding: 5px
+}
+
+/*Fin mise en forme filtres*/
+/*Fin de la mise en forme de la zone de recherche et de filtre*/
+
+/*Début mise en forme information*/
+#info
+{
+    justify-content: flex-start;
+    align-items: center;
+    margin: 25px 25px 0px 20px;
+}
+
+#info p
+{
+    padding: 0px 25px 0px 10px;
+    text-align: justify;
+}
+/*Fin mise en forme information*/
+
+/*Début de la mise en forme de la zone de description des hébergements */
+#hebergements
+{
+    flex-direction: column;
+}
+
+
+/*Début de la mise en forme des hébergements à Marseille*/
+#hebergements_description:nth-child(1)
+{
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 35px 20px 20px 0px;
+    margin: 0px;
+}
+
+.hebergements_description_titre
+{
+    padding: 15px 15px 10px 15px;
+}
+
+/*Début de la mise en page des cartes hébergements*/
+#hebergements_cartes
+{
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hebergements_carte_hotel
+{
+    justify-content:flex-start;
+    width: 84%;
+    margin: 10px 25px 10px 0px;
+}
+
+/*Fin de la mise en page des cartes hébergements*/
+
+/*Début de la mise en page des hébergements populaires */
+#hebergements_populaires:nth-child(2)
+{
+    display: flex;
+    order: 1;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #F2F2F2;
+    position: relative;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#hebergements_populaires_titre
+{
+    padding: 0px 25px 25px 0px;    
+}
+
+
+
+/*Début de la mise en page des cartes des hébergements populaires */
+
+#hebergements_populaires_cartes
+{
+    align-items:flex-start;
+    padding: 0px 0px 0px 0px;
+}
+
+.hebergements_carte_populaire
+{
+    width: 95%;
+    height: 100px;
+    margin: 5px 0px 5px 0px;
+    padding: 0px;
+}
+
+.hebergements_carte_populaire_content 
+{
+    padding-left: 10px;
+}
+ .hebergements_carte_populaire_txt,.hebergements_carte_populaire_content .etoiles
+ { 
+     display: flex;
+     justify-content: flex-start;
+     padding: 5px 5px 15px 5px;  
+}
+
+.hebergements_carte_populaire_txt h4, .hebergements_carte_populaire_txt p
+{
+    padding: 4px 4px 4px 0px;
+}
+
+/*Fin de la mise en page des cartes des hébergements populaires */
+/*Fin de la mise en page des hébergements populaires */
+/*Fin de la mise en forme de la zone de description des hébergements */
+
+/*Début de la mise en page de la zone activités*/
+
+.activites_titre
+{
+    padding: 25px 25px 5px 25px;
+}
+
+/*Début de la mise en page des cartes activités*/
+#activites_marseille
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px 40px 0px;
+}
+
+.activites_cartes_long
+{
+    margin: 10px 25px 10px 25px;
+    height: 100%;
+    width: 85%;
+}
+
+#activites_cartes_6535, #activites_cartes_4060
+{
+    height:100%;
+    width: 100%;
+    margin: 0px;
+}
+
+.activites_cartes1, #activites_cartes2, #activites_cartes3, #activites_cartes4, #activites_cartes5
+{
+    width: 100%;
+      
+}
+
+#activites_cartes2, #activites_cartes3, #activites_cartes4, #activites_cartes5
+{
+    margin: 10px 25px 10px 25px;
+    width: 85%;
+}
+
+.activites_image_long, #activites_image_pomegues, #activites_image_frioul, #activites_image_parc, #activites_image_garde
+{
+    object-fit: cover;
+    width: 100%;
+    height: 125px;
+    border-radius:20px 20px 0px 0px;
+}
+
+figcaption
+{
+    display: flex;
+    align-content: center;
+    padding: 10px 0px 10px 10px;
+}
+
+/*Fin de la mise en page des cartes activités*/
+/*Fin de la mise en page de la zone activités*/
+
+/*Début de la mise en page de la zone "A Propos"*/
+footer
+{
+    flex-direction: column;
+    padding: 25px 25px 0px 25px;
+}
+
+.footer
+{
+    margin: 0px 0px 25px 0px;
+}
+
+.footer ul li
+{
+    padding: 5px 0px 0px 0px;
+}
+
+/*Fin de la mise en page de la zone "A Propos"*/
+
+}
