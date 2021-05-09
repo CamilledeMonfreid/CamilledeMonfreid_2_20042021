@@ -487,7 +487,7 @@ header
 
 .hebergements_carte_populaire_content .etoiles
 {
-    padding: 15px 15px 15px 15px;
+    padding: 5px 15px 15px 15px;
     position: relative;
 }
 
@@ -676,7 +676,7 @@ footer
 }
 /*Fin de la mise en page de la zone "A Propos"*/
 
-@media (max-width: 980px) { 
+@media (max-width: 1000px) { 
 /*Début du reset CSS */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -732,6 +732,9 @@ table {
 body 
 {
     font-family: 'Raleway', sans-serif;
+
+
+    
 }
 
 body header, body #zone_recherche, body #activites, body #hebergements
@@ -741,25 +744,25 @@ body header, body #zone_recherche, body #activites, body #hebergements
 
 h1,h2
 {
-    font-size:xx-large;
+    font-size:x-large;
     font-weight: 700;
 }
 
 h3, #br_bouton
 {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 h4
 {
-    font-size: large;
+    font-size: medium;
     font-weight: 700;
 }
 
 #menu, p,.footer_content
 {
-    font-size: large;
+    font-size: medium;
 }
 /*Fin des mises en forme générales */
 
@@ -779,13 +782,16 @@ header
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     justify-self:start;
+    align-self: center;
     padding-left: 10px;
+    
 }
 
 #logo img 
 {
-    height: 100px;
+
     padding-left: 50px;
+    justify-content: center;
 }
 
 /*Début de la mise en forme du menu*/
@@ -807,7 +813,8 @@ header
     align-self: stretch;
     width: 100%;
     border-bottom: 2px solid #F2F2F2;
-    font-size: xx-large;
+    font-size: large;
+    padding-bottom: 20px;
 }
 
 
@@ -822,7 +829,7 @@ header
 #menu_inscription a
 {
     justify-self:end;
-    font-size: xx-large;
+    font-size: large;
     padding: 38px 50px 50px 25px;  
 }
 
@@ -838,11 +845,16 @@ header
 /*Début de la mise en forme de la zone de recherche et de filtre*/
 #zone_recherche h1, #zone_recherche p
 {
-    padding: 20px 70px 5px 60px;
+    padding: 20px 70px 5px 20px;
 }
 #zone_recherche h1
 {
-    font-size:50px;
+    font-size:28px;
+}
+
+#zone_recherche p
+{
+    font-size: medium;
 }
 
 /*Début mise en forme barre de Recherche */
@@ -850,28 +862,28 @@ header
 {
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 70px 0px 70px 60px;
+    margin: 40px 0px 70px 20px;
     width: 100%;
-    height: 100px;
+    height: 60px;
 }
 
 #br_icone 
 {
     width: 15%;
     height: 100%;
-    border-radius: 35px 0px 0px 35px;
-    font-size: xx-large;
+    border-radius: 15px 0px 0px 15px;
+    font-size: large;
 }
 
 #br_saisierecherche
 {
-    width: 70%;
+    width: 60%;
 }
 
 #br_saisierecherche input
 {
     width: 100%;
-    font-size: 40px;   
+    font-size: large;   
 }
 
 #br_bouton
@@ -898,11 +910,11 @@ header
     align-items: center;
     justify-items: stretch;
     padding: 25px;
-    border-radius: 0px 35px 35px 0px;
+    border-radius: 0px 15px 15px 0px;
     background-color: #0065FC;
     text-decoration: none;
     font-weight: 700;
-    font-size: xx-large;
+    font-size: large;
     color: white;
     width: 20%;
 }
@@ -916,7 +928,7 @@ header
     align-content:flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 70px 0px 70px 60px;
+    margin: 70px 0px 70px 20px;
 }
 
 #filtres_cliquable
@@ -932,7 +944,7 @@ header
 .filtres_nom a
 {
     margin: 20px 20px 20px 0px;
-    padding: 30px 20px 30px 0px;
+    padding: 10px 20px 10px 0px;
     border-radius:60px 60px 60px 60px;
 }
 
@@ -945,15 +957,15 @@ header
     border-radius:70px 70px 70px 70px;
     background-color: #DEEBFF;
     margin: 0px 10px 0px 0px;
-    width: 110px;
-    height: 110px;
+    width: 70px;
+    height: 70px;
     color:#0065FC;
-    font-size: 60px;  
+    font-size: 30px;  
 }
 
 .filtres_nom h3
 {
-    padding: 10px 10px 10px 20px;
+    padding: 10px 0px 10px 0px;
 }
 
 /*Fin mise en forme filtres*/
@@ -964,29 +976,29 @@ header
 {
     justify-content: flex-start;
     align-items: center;
-    margin: 25px 25px 50px 50px;
+    margin: 25px 25px 50px 20px;
 }
 
 #info p
 {
-    padding: 0px 25px 0px 40px;
+    padding: 0px 25px 0px 10px;
     text-align: justify;
     align-items: baseline;
-    font-size: 40px;
+    font-size: medium;
 }
 
 #info_logo
 {
     display: flex;
     text-align: center;
-    width:75px;
-    height: 60px;
+    width:35px;
+    height: 30px;
     border-radius:70px 70px 70px 70px; 
     border-style: solid;
     border-color:#D4D4D4;
     border-width: 1px;
     color: #0065FC;
-    font-size:40px;  
+    font-size:15px;  
 }
 /*Fin mise en forme information*/
 
@@ -1011,21 +1023,20 @@ header
 
 .hebergements_description_titre
 {
-    padding: 15px 15px 30px 70px;
-    font-size: 50px;
+    padding: 0px 15px 10px 20px;
+    font-size: x-large;
 }
 
 .hebergements_description_titre h4
 {
 
-    font-size: 40px;
+    font-size: medium;
 }
 
 /*Début de la mise en page des cartes hébergements*/
 #hebergements_cartes
 {
     justify-content:flex-start;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -1033,27 +1044,27 @@ header
 {
     justify-content:flex-start;
     width: 90%;
-    margin: 10px 0px 40px 46px;
-    border-radius: 40px 40px 40px 40px;
-    padding: 10px;
+    margin: 10px 0px 40px 0px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 5px;
 }
 
 .hebergements_carte_hotel_txt
 {
-    margin: 20px;
+    margin: 0px;
 }
 
 .hebergements_carte_hotel_txt h4, .hebergements_carte_hotel_txt p, .hebergements_carte_hotel_txt .etoiles
 {
-    font-size: 45px;
+    font-size: medium;
 }
 
 .hebergements_image
 {
     object-fit: cover;
     width: 100%;
-    height: 350px;
-    border-radius: 40px 40px 0px 0px; 
+    height: 150px;
+    border-radius: 20px 20px 0px 0px; 
 }
 /*Fin de la mise en page des cartes hébergements*/
 /*Fin de la mise en forme des hébergements à Marseille*/
@@ -1065,7 +1076,7 @@ header
     order: 1;
     flex-direction: column;
     margin: 0px 0px 0px 0px;
-    padding: 35px 20px 50px 20px;
+    padding: 35px 20px 30px 0px;
     width: 100%;
     height: 100%;
     background-color: #F2F2F2;
@@ -1073,15 +1084,9 @@ header
     border-radius: 0px 0px 0px 0px;
 }
 
-#hebergements_populaires_titre
-{
-    padding: 50px 50px 50px 50px;
-    font-size: 50px;    
-}
-
 #hebergements_populaires_titre h2, #hebergements_populaires_titre i
 {
-    font-size: 50px;    
+    font-size: x-large;    
 }
 
 /*Début de la mise en page des cartes des hébergements populaires */
@@ -1089,47 +1094,51 @@ header
 {
     align-items:flex-start;
     padding: 0px 0px 0px 0px;
-    margin: 0px 50px 0px 50px;
+    margin: 0px 50px 0px 20px;
 }
 
 .hebergements_carte_populaire
 {
     width: 100%;
-    height: 300px;
+    height: 100%;
     margin: 20px 0px 20px 0px;
     padding: 0px;
-    border-radius: 40px 40px 40px 40px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .hebergements_carte_populaire_content 
 {
     justify-content: space-between;
     padding: 0px 10px 1px 10px;
-    height: 100%;
-    position:relative;
+    height: 150px;
 }
  .hebergements_carte_populaire_txt,.hebergements_carte_populaire_content .etoiles
  { 
      display: flex;
-     justify-content: flex-start;
      padding: 5px 5px 0px 5px;
-     margin: 30px 0px 20px 0px;
-     font-size: 45px;  
+     height: 100%;
+     
+     
+}
+
+.hebergements_carte_populaire_content .etoiles
+ { 
+    align-items: flex-end;
+     
 }
 
 .hebergements_carte_populaire_txt h4, .hebergements_carte_populaire_txt p
 {
     padding: 4px 4px 0px 0px;
-    font-size: 45px;
 }
 
 .hebergements_populaires_image
 {
     object-fit: cover;
-    padding: 15px 0px 15px 15px;
-    width: 300px;
-    height: calc(100% - 30px);
-    border-radius: 40px 0px 0px 40px;
+    padding: 5px 0px 5px 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px 0px 0px 20px;
 }
 /*Fin de la mise en page des cartes des hébergements populaires */
 /*Fin de la mise en page des hébergements populaires */
@@ -1138,7 +1147,7 @@ header
 /*Début de la mise en page de la zone activités*/
 .activites_titre
 {
-    padding: 25px 25px 5px 60px;
+    padding: 25px 25px 5px 20px;
 }
 
 /*Début de la mise en page des cartes activités*/
@@ -1148,14 +1157,14 @@ header
     flex-direction: column;
     width: 100%;
     height: 100%;
-    margin: 10px 0px 40px 50px;
+    margin: 10px 0px 40px 20px;
 }
 
 .activites_cartes_long
 {
     margin: 20px 25px 20px 0px;
     height: 100%;
-    width: 95%;
+    width: 90%;
     border-radius:40px 40px 40px 40px;
 }
 
@@ -1177,7 +1186,7 @@ header
 #activites_cartes2, #activites_cartes3, #activites_cartes4, #activites_cartes5
 {
     margin: 10px 25px 10px 25px;
-    width: 95%;
+    width: 90%;
     border-radius:40px 40px 40px 40px;
     margin: 20px 0px 20px 0px;
 }
@@ -1186,7 +1195,7 @@ header
 {
     object-fit: cover;
     width: 100%;
-    height: 300px;
+    height: 200px;
     border-radius:40px 40px 0px 0px;
 }
 
@@ -1195,7 +1204,7 @@ figcaption
     display: flex;
     align-content: center;
     padding: 20px 0px 20px 20px;
-    font-size: 40px;
+    font-size: medium;
     font-weight: 700;;
 }
 /*Fin de la mise en page des cartes activités*/
@@ -1205,12 +1214,12 @@ figcaption
 footer
 {
     flex-direction: column;
-    padding: 25px 0px 0px 25px;
+    padding: 25px 0px 5px 25px;
 }
 
 .footer
 {
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 30px 0px;
 }
 
 .footer ul li
@@ -1220,13 +1229,13 @@ footer
 
 .footer h4
 {
-    font-size: 40px;
+    font-size: x-large;
 }
 /*Fin de la mise en page de la zone "A Propos"*/
 
 }
 
-@media (min-device-width: 1024px) and (max-device-width: 1024px)
+@media (min-width: 1000px) and (max-width: 1180px)
 {
 h1,h2
 {
@@ -1240,11 +1249,11 @@ h3, #br_bouton
 
 #menu, p,.footer_content, figcaption, h4
 {
-    font-size: small;
+    font-size: medium;
 }
 
 #hebergements h4, #hebergements p, .etoiles
 {
-    font-size: x-small;
+    font-size: small;
 }
 }
