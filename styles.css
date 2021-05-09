@@ -1226,7 +1226,7 @@ footer
 
 }
 
-@media (max-width: 1024px min-width:980px) 
+@media (min-device-width: 1024px) and (max-device-width: 1024px)
 {
 h1,h2
 {
